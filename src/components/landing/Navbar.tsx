@@ -35,7 +35,7 @@ export function Navbar({ dict, lang }: NavbarProps) {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href={`/${lang}`} className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Harmocare" width={32} height={32} />
+          <Image src="/logo.svg" alt="Harmocare" width={32} height={32} />
           <span className="text-lg font-bold text-foreground">Harmocare</span>
         </Link>
 

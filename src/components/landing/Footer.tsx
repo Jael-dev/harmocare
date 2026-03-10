@@ -23,7 +23,7 @@ export function Footer({ dict, lang }: FooterProps) {
           {/* Logo + tagline */}
           <div className="flex flex-col items-center gap-2 md:items-start">
             <Link href={`/${lang}`} className="flex items-center gap-2">
-              <Image src="/logo.png" alt="Harmocare" width={28} height={28} />
+              <Image src="/logo.svg" alt="Harmocare" width={28} height={28} />
               <span className="font-bold text-foreground">Harmocare</span>
             </Link>
             <p className="text-sm text-muted-foreground">
