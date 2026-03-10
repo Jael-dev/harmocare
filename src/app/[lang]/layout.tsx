@@ -16,7 +16,7 @@ export default async function LangLayout({
   const lang = rawLang as Locale;
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
       <div lang={lang}>{children}</div>
     </ThemeProvider>
   );
