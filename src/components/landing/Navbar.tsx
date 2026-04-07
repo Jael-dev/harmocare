@@ -67,7 +67,7 @@ export function Navbar({ dict, lang }: NavbarProps) {
             <DropdownMenuContent align="end">
               <DropdownMenuItem>
                 <Link href="/fr" className={lang === "fr" ? "font-bold" : ""}>
-                  Fran\u00e7ais
+                  Français
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
