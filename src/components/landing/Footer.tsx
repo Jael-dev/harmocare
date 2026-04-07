@@ -10,7 +10,7 @@ interface FooterProps {
 
 export function Footer({ dict, lang }: FooterProps) {
   const links = [
-    { label: dict.nav.blog, href: "#features" },
+    { label: dict.nav.blog, href: `/${lang}/blog` },
     { label: dict.nav.community, href: "#features" },
     { label: dict.nav.insights, href: "#features" },
     { label: dict.nav.testimonials, href: "#features" },
@@ -66,8 +66,8 @@ export function Footer({ dict, lang }: FooterProps) {
         {/* Legal */}
         <div className="mt-8 flex flex-col items-center gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:justify-between">
           <p>{dict.footer.legal}</p>
-          <Link href="#" className="hover:text-foreground">
-            {dict.footer.legalLinks}
+          <Link href={`/${lang}/privacy`} className="hover:text-foreground">
+            {dict.footer.privacyPolicy}
           </Link>
         </div>
       </div>

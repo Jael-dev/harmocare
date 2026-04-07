@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useId, useState } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
@@ -20,8 +20,8 @@ interface NavbarProps {
   lang: Locale;
 }
 
-const navLinks = [
-  { key: "blog" as const, href: "#features" },
+const getNavLinks = (lang: Locale) => [
+  { key: "blog" as const, href: `/${lang}/blog` },
   { key: "community" as const, href: "#features" },
   { key: "insights" as const, href: "#features" },
   { key: "testimonials" as const, href: "#features" },
@@ -29,6 +29,7 @@ const navLinks = [
 
 export function Navbar({ dict, lang }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const langMenuId = useId();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
@@ -41,7 +42,7 @@ export function Navbar({ dict, lang }: NavbarProps) {
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-6 md:flex">
-          {navLinks.map((link) => (
+          {getNavLinks(lang).map((link) => (
             <Link
               key={link.key}
               href={link.href}
@@ -57,6 +58,7 @@ export function Navbar({ dict, lang }: NavbarProps) {
           {/* Language switcher */}
           <DropdownMenu>
             <DropdownMenuTrigger
+              id={langMenuId}
               className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg text-sm transition-all hover:bg-muted hover:text-foreground"
             >
               <Globe className="size-4" />
@@ -105,7 +107,7 @@ export function Navbar({ dict, lang }: NavbarProps) {
       {mobileOpen && (
         <div className="border-t border-border md:hidden">
           <div className="flex flex-col gap-2 px-4 py-4">
-            {navLinks.map((link) => (
+            {getNavLinks(lang).map((link) => (
               <Link
                 key={link.key}
                 href={link.href}
