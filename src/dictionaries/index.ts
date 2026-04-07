@@ -32,7 +32,7 @@ export interface Dictionary {
   footer: {
     tagline: string;
     legal: string;
-    legalLinks: string;
+    privacyPolicy: string;
   };
 }
 

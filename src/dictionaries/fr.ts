@@ -52,7 +52,7 @@ const fr = {
   footer: {
     tagline: "Ton compagnon de bien-\u00eatre hormonal",
     legal: "\u00a9 2025 Harmocare \u2014 Tous droits r\u00e9serv\u00e9s",
-    legalLinks: "Mentions l\u00e9gales",
+    privacyPolicy: "Politique de confidentialité",
   },
 } as const;
 
