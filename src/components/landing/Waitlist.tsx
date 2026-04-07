@@ -49,7 +49,7 @@ export function Waitlist({ dict }: WaitlistProps) {
   return (
     <section
       id="waitlist"
-      className="relative overflow-hidden bg-gradient-to-br from-brand-dark via-brand-dark to-[#2A2050] py-20 lg:py-28"
+      className="relative overflow-hidden bg-gradient-to-br from-brand-dark via-[#3D2D58] to-[#2A2050] py-24 lg:py-32"
     >
       <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

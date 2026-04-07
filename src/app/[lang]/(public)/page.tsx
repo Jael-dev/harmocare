@@ -15,7 +15,7 @@ export default async function LandingPage({
   return (
     <>
       <Hero dict={dict} />
-      <FeatureCards dict={dict} />
+      <FeatureCards dict={dict} lang={lang} />
       <Waitlist dict={dict} />
     </>
   );

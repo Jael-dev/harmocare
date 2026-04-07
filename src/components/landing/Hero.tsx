@@ -14,13 +14,13 @@ interface HeroProps {
 
 export function Hero({ dict }: HeroProps) {
   return (
-    <section className="relative overflow-hidden">
-      <div className="mx-auto flex max-w-7xl flex-col-reverse items-center gap-12 px-4 py-20 sm:px-6 lg:flex-row lg:gap-16 lg:px-8 lg:py-32">
+    <section className="relative overflow-hidden bg-background">
+      <div className="mx-auto flex max-w-7xl flex-col-reverse items-center gap-12 px-4 py-24 sm:px-6 lg:flex-row lg:gap-16 lg:px-8 lg:py-36">
         {/* Left content */}
         <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left">
           <Badge
             variant="secondary"
-            className="mb-6 border-lavender/30 bg-lavender/10 text-lavender dark:text-lavender"
+            className="mb-6 border-brand/30 bg-brand/10 text-brand"
           >
             {dict.hero.badge}
           </Badge>
@@ -52,8 +52,8 @@ export function Hero({ dict }: HeroProps) {
 
         {/* Right image */}
         <div className="flex flex-1 items-center justify-center">
-          <div className="relative aspect-square w-full max-w-md rounded-[2rem] bg-gradient-to-br from-lavender/20 via-rose/15 to-brand/10 p-8">
-            <div className="flex h-full items-center justify-center rounded-[1.5rem] border border-border/30 bg-card/60 backdrop-blur-sm shadow-lg shadow-lavender/5">
+          <div className="relative aspect-square w-full max-w-md rounded-2xl bg-gradient-to-br from-lavender/20 via-rose/15 to-blush/10 p-8">
+            <div className="flex h-full items-center justify-center rounded-xl border border-border/30 bg-card/60 backdrop-blur-sm shadow-lg shadow-lavender/5">
               <Image
                 src="/logo.svg"
                 alt="Harmocare"
@@ -67,8 +67,8 @@ export function Hero({ dict }: HeroProps) {
       </div>
 
       {/* Background decoration */}
-      <div className="pointer-events-none absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-lavender/8 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-40 left-0 h-[400px] w-[400px] rounded-full bg-rose/8 blur-3xl" />
+      <div className="pointer-events-none absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-lavender/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 left-0 h-[400px] w-[400px] rounded-full bg-rose/10 blur-3xl" />
     </section>
   );
 }
