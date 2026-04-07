@@ -8,7 +8,7 @@ const waitlistSchema = z.object({
 });
 
 export type WaitlistResult =
-  | { success: true }
+  | { success: true; alreadyExisted?: boolean }
   | { success: false; error: string };
 
 const supabase = createClient(
@@ -31,7 +31,7 @@ export async function joinWaitlist(formData: FormData): Promise<WaitlistResult> 
 
   if (error) {
     if (error.code === "23505") {
-      return { success: false, error: "Cet email est d\u00e9j\u00e0 inscrit." };
+      return { success: true, alreadyExisted: true };
     }
     return { success: false, error: error.message };
   }
