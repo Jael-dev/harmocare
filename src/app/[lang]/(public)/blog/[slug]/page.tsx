@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ReactionBar } from "@/components/blog/ReactionBar";
 import { ReadTracker } from "@/components/blog/ReadTracker";
+import { ShareButton } from "@/components/blog/ShareButton";
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
@@ -38,6 +39,7 @@ export default async function BlogPostPage({
   const slugs = getBlogSlugs(lang);
   if (!slugs.includes(slug)) notFound();
 
+  const blog = getBlogBySlug(slug, lang);
   const { default: Content } = await import(
     `@/content/blogs/${lang}/${slug}.mdx`
   );
@@ -48,6 +50,7 @@ export default async function BlogPostPage({
         <Content />
       </article>
       <div className="mt-12 flex flex-col gap-6">
+        <ShareButton slug={slug} locale={lang} title={blog.title} />
         <ReactionBar slug={slug} locale={lang} />
         <ReadTracker slug={slug} locale={lang} />
       </div>
