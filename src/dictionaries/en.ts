@@ -12,7 +12,7 @@ const en = {
     badge: "Coming soon",
     headline: "Understand your body,\nrestore your balance",
     description:
-      "Harmocare is your hormonal wellness companion. Through micro-learning, personalized tracking, and a caring community, take back control of your health.",
+      "Harmocares is your hormonal wellness companion. Through micro-learning, personalized tracking, and a caring community, take back control of your health.",
     cta: "I want early access",
   },
   features: {
@@ -41,7 +41,7 @@ const en = {
     ],
   },
   waitlist: {
-    headline: "Be among the first to discover Harmocare",
+    headline: "Be among the first to discover Harmocares",
     description:
       "Sign up to get early access and exclusive content on hormonal wellness.",
     placeholder: "Your email address",
@@ -51,7 +51,7 @@ const en = {
   },
   footer: {
     tagline: "Your hormonal wellness companion",
-    legal: "\u00a9 2025 Harmocare \u2014 All rights reserved",
+    legal: "\u00a9 2025 Harmocares \u2014 All rights reserved",
     privacyPolicy: "Privacy Policy",
   },
 } as const;

@@ -7,7 +7,7 @@ const content = {
     sections: [
       {
         heading: "1. Introduction",
-        body: "Harmocare (« nous », « notre ») s'engage à protéger la vie privée de ses utilisateurs. La présente politique décrit les données personnelles que nous collectons, comment nous les utilisons et les droits dont vous disposez.",
+        body: "Harmocares (« nous », « notre ») s'engage à protéger la vie privée de ses utilisateurs. La présente politique décrit les données personnelles que nous collectons, comment nous les utilisons et les droits dont vous disposez.",
       },
       {
         heading: "2. Données collectées",
@@ -23,7 +23,7 @@ const content = {
         heading: "3. Utilisation des données",
         body: "Vos données sont utilisées pour :",
         list: [
-          "Vous envoyer des informations sur Harmocare si vous avez rejoint la liste d'attente.",
+          "Vous envoyer des informations sur Harmocares si vous avez rejoint la liste d'attente.",
           "Suivre votre parcours de lecture et afficher votre progression.",
           "Afficher le nombre de réactions sur les articles.",
           "Améliorer nos contenus et notre service.",
@@ -69,7 +69,7 @@ const content = {
     sections: [
       {
         heading: "1. Introduction",
-        body: 'Harmocare ("we", "our") is committed to protecting the privacy of its users. This policy describes the personal data we collect, how we use it, and your rights.',
+        body: 'Harmocares ("we", "our") is committed to protecting the privacy of its users. This policy describes the personal data we collect, how we use it, and your rights.',
       },
       {
         heading: "2. Data We Collect",
@@ -85,7 +85,7 @@ const content = {
         heading: "3. How We Use Your Data",
         body: "Your data is used to:",
         list: [
-          "Send you information about Harmocare if you joined the waitlist.",
+          "Send you information about Harmocares if you joined the waitlist.",
           "Track your reading journey and display your progress.",
           "Display reaction counts on articles.",
           "Improve our content and service.",

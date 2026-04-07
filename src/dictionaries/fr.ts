@@ -12,7 +12,7 @@ const fr = {
     badge: "Bient\u00f4t disponible",
     headline: "Comprends ton corps,\nreprends ton \u00e9quilibre",
     description:
-      "Harmocare est ton compagnon de bien-\u00eatre hormonal. Gr\u00e2ce au micro-apprentissage, au suivi personnalis\u00e9 et \u00e0 une communaut\u00e9 bienveillante, reprends le contr\u00f4le de ta sant\u00e9.",
+      "Harmocares est ton compagnon de bien-\u00eatre hormonal. Gr\u00e2ce au micro-apprentissage, au suivi personnalis\u00e9 et \u00e0 une communaut\u00e9 bienveillante, reprends le contr\u00f4le de ta sant\u00e9.",
     cta: "Je veux tester en avant-premi\u00e8re",
   },
   features: {
@@ -41,7 +41,7 @@ const fr = {
     ],
   },
   waitlist: {
-    headline: "Sois parmi les premi\u00e8res \u00e0 d\u00e9couvrir Harmocare",
+    headline: "Sois parmi les premi\u00e8res \u00e0 d\u00e9couvrir Harmocares",
     description:
       "Inscris-toi pour recevoir un acc\u00e8s anticip\u00e9 et des contenus exclusifs sur le bien-\u00eatre hormonal.",
     placeholder: "Ton adresse email",
@@ -51,7 +51,7 @@ const fr = {
   },
   footer: {
     tagline: "Ton compagnon de bien-\u00eatre hormonal",
-    legal: "\u00a9 2025 Harmocare \u2014 Tous droits r\u00e9serv\u00e9s",
+    legal: "\u00a9 2025 Harmocares \u2014 Tous droits r\u00e9serv\u00e9s",
     privacyPolicy: "Politique de confidentialité",
   },
 } as const;

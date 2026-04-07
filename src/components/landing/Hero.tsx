@@ -56,7 +56,7 @@ export function Hero({ dict }: HeroProps) {
             <div className="flex h-full items-center justify-center rounded-xl border border-border/30 bg-card/60 backdrop-blur-sm shadow-lg shadow-lavender/5">
               <Image
                 src="/logo.svg"
-                alt="Harmocare"
+                alt="Harmocares"
                 width={160}
                 height={160}
                 className="opacity-60"

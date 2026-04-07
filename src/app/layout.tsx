@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Harmocare — Ton compagnon de bien-\u00eatre hormonal",
+  title: "Harmocares — Ton compagnon de bien-\u00eatre hormonal",
   description:
-    "Harmocare est une app mobile gamifi\u00e9e qui aide les femmes \u00e0 comprendre leur \u00e9quilibre hormonal gr\u00e2ce au micro-apprentissage et au suivi personnalis\u00e9.",
+    "Harmocares est une app mobile gamifi\u00e9e qui aide les femmes \u00e0 comprendre leur \u00e9quilibre hormonal gr\u00e2ce au micro-apprentissage et au suivi personnalis\u00e9.",
   icons: {
     icon: "/logo.svg",
   },
