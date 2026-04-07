@@ -1,6 +1,7 @@
 import { getDictionary, type Locale } from "@/dictionaries";
 import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
+import { WaitlistProvider } from "@/components/landing/WaitlistContext";
 
 export default async function PublicLayout({
   children,
@@ -14,10 +15,12 @@ export default async function PublicLayout({
   const dict = getDictionary(lang);
 
   return (
-    <div className="flex min-h-screen flex-col">
-      <Navbar dict={dict} lang={lang} />
-      <main className="flex-1">{children}</main>
-      <Footer dict={dict} lang={lang} />
-    </div>
+    <WaitlistProvider>
+      <div className="flex min-h-screen flex-col">
+        <Navbar dict={dict} lang={lang} />
+        <main className="flex-1">{children}</main>
+        <Footer dict={dict} lang={lang} />
+      </div>
+    </WaitlistProvider>
   );
 }

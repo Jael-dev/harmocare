@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useWaitlist } from "@/components/landing/WaitlistContext";
 import type { Dictionary } from "@/dictionaries";
 
 interface HeroProps {
@@ -13,6 +14,8 @@ interface HeroProps {
 }
 
 export function Hero({ dict }: HeroProps) {
+  const { joined } = useWaitlist();
+
   return (
     <section className="relative overflow-hidden bg-background">
       <div className="mx-auto flex max-w-7xl flex-col-reverse items-center gap-12 px-4 py-24 sm:px-6 lg:flex-row lg:gap-16 lg:px-8 lg:py-36">
@@ -38,16 +41,23 @@ export function Hero({ dict }: HeroProps) {
             {dict.hero.description}
           </p>
 
-          <Link
-            href="#waitlist"
-            className={cn(
-              buttonVariants({ size: "lg" }),
-              "mt-8 bg-gradient-to-r from-brand to-lavender text-white hover:opacity-90 font-semibold text-base px-8 rounded-full shadow-md shadow-brand/20"
-            )}
-          >
-            {dict.hero.cta}
-            <ArrowRight className="ml-2 size-4" />
-          </Link>
+          {joined ? (
+            <span className="mt-8 inline-flex items-center gap-2 text-base font-medium text-brand">
+              <CheckCircle className="size-5" />
+              {dict.hero.ctaJoined}
+            </span>
+          ) : (
+            <Link
+              href="#waitlist"
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "mt-8 bg-gradient-to-r from-brand to-lavender text-white hover:opacity-90 font-semibold text-base px-8 rounded-full shadow-md shadow-brand/20"
+              )}
+            >
+              {dict.hero.cta}
+              <ArrowRight className="ml-2 size-4" />
+            </Link>
+          )}
         </div>
 
         {/* Right image */}

@@ -6,6 +6,7 @@ const en = {
     insights: "Insights",
     testimonials: "Testimonials",
     cta: "Join the waitlist",
+    ctaJoined: "Already on the list",
     language: "Language",
   },
   hero: {
@@ -14,6 +15,7 @@ const en = {
     description:
       "Harmocares is your hormonal wellness companion. Through micro-learning, personalized tracking, and a caring community, take back control of your health.",
     cta: "I want early access",
+    ctaJoined: "Already signed up",
   },
   features: {
     title: "What awaits you",
@@ -47,6 +49,7 @@ const en = {
     placeholder: "Your email address",
     cta: "Sign me up",
     success: "Thanks! You're on the list.",
+    alreadyJoined: "You're already on the waitlist!",
     followUs: "Follow us",
   },
   footer: {

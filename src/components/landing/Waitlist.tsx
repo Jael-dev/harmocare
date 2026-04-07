@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Instagram, Linkedin, Loader2 } from "lucide-react";
 import { joinWaitlist } from "@/app/actions/waitlist";
+import { useWaitlist } from "@/components/landing/WaitlistContext";
 import type { Dictionary } from "@/dictionaries";
 
 const schema = z.object({
@@ -21,6 +22,7 @@ interface WaitlistProps {
 }
 
 export function Waitlist({ dict }: WaitlistProps) {
+  const { joined, setJoined } = useWaitlist();
   const [submitted, setSubmitted] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
 
@@ -41,10 +43,13 @@ export function Waitlist({ dict }: WaitlistProps) {
 
     if (result.success) {
       setSubmitted(true);
+      setJoined(true);
     } else {
       setServerError(result.error);
     }
   };
+
+  const showSuccess = submitted || joined;
 
   return (
     <section
@@ -59,10 +64,14 @@ export function Waitlist({ dict }: WaitlistProps) {
           {dict.waitlist.description}
         </p>
 
-        {submitted ? (
+        {showSuccess ? (
           <div className="mt-8 flex items-center justify-center gap-2 text-brand">
             <CheckCircle className="size-5" />
-            <span className="text-lg font-medium">{dict.waitlist.success}</span>
+            <span className="text-lg font-medium">
+              {joined && !submitted
+                ? dict.waitlist.alreadyJoined
+                : dict.waitlist.success}
+            </span>
           </div>
         ) : (
           <form

@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useId, useState } from "react";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, CheckCircle } from "lucide-react";
+import { useWaitlist } from "@/components/landing/WaitlistContext";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -30,6 +31,7 @@ const getNavLinks = (lang: Locale) => [
 export function Navbar({ dict, lang }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const langMenuId = useId();
+  const { joined } = useWaitlist();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
@@ -81,15 +83,22 @@ export function Navbar({ dict, lang }: NavbarProps) {
           <ThemeToggle />
 
           {/* Desktop CTA */}
-          <Link
-            href="#waitlist"
-            className={cn(
-              buttonVariants(),
-              "hidden md:inline-flex bg-gradient-to-r from-brand to-lavender text-white hover:opacity-90 font-semibold rounded-full"
-            )}
-          >
-            {dict.nav.cta}
-          </Link>
+          {joined ? (
+            <span className="hidden md:inline-flex items-center gap-1.5 text-sm font-medium text-brand">
+              <CheckCircle className="size-4" />
+              {dict.nav.ctaJoined}
+            </span>
+          ) : (
+            <Link
+              href="#waitlist"
+              className={cn(
+                buttonVariants(),
+                "hidden md:inline-flex bg-gradient-to-r from-brand to-lavender text-white hover:opacity-90 font-semibold rounded-full"
+              )}
+            >
+              {dict.nav.cta}
+            </Link>
+          )}
 
           {/* Mobile menu toggle */}
           <Button
@@ -117,16 +126,23 @@ export function Navbar({ dict, lang }: NavbarProps) {
                 {dict.nav[link.key]}
               </Link>
             ))}
-            <Link
-              href="#waitlist"
-              className={cn(
-                buttonVariants(),
-                "mt-2 bg-gradient-to-r from-brand to-lavender text-white hover:opacity-90 font-semibold rounded-full"
-              )}
-              onClick={() => setMobileOpen(false)}
-            >
-              {dict.nav.cta}
-            </Link>
+            {joined ? (
+              <span className="mt-2 flex items-center justify-center gap-1.5 text-sm font-medium text-brand">
+                <CheckCircle className="size-4" />
+                {dict.nav.ctaJoined}
+              </span>
+            ) : (
+              <Link
+                href="#waitlist"
+                className={cn(
+                  buttonVariants(),
+                  "mt-2 bg-gradient-to-r from-brand to-lavender text-white hover:opacity-90 font-semibold rounded-full"
+                )}
+                onClick={() => setMobileOpen(false)}
+              >
+                {dict.nav.cta}
+              </Link>
+            )}
           </div>
         </div>
       )}

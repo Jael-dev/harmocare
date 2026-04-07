@@ -6,6 +6,7 @@ const fr = {
     insights: "Insights",
     testimonials: "T\u00e9moignages",
     cta: "Rejoindre la liste d'attente",
+    ctaJoined: "Déjà sur la liste",
     language: "Langue",
   },
   hero: {
@@ -14,6 +15,7 @@ const fr = {
     description:
       "Harmocares est ton compagnon de bien-\u00eatre hormonal. Gr\u00e2ce au micro-apprentissage, au suivi personnalis\u00e9 et \u00e0 une communaut\u00e9 bienveillante, reprends le contr\u00f4le de ta sant\u00e9.",
     cta: "Je veux tester en avant-premi\u00e8re",
+    ctaJoined: "Déjà inscrite",
   },
   features: {
     title: "Ce qui t'attend",
@@ -47,6 +49,7 @@ const fr = {
     placeholder: "Ton adresse email",
     cta: "M'inscrire",
     success: "Merci ! Tu es sur la liste.",
+    alreadyJoined: "Tu es déjà sur la liste d'attente !",
     followUs: "Suis-nous",
   },
   footer: {

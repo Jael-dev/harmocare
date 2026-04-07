@@ -9,6 +9,7 @@ export interface Dictionary {
     insights: string;
     testimonials: string;
     cta: string;
+    ctaJoined: string;
     language: string;
   };
   hero: {
@@ -16,6 +17,7 @@ export interface Dictionary {
     headline: string;
     description: string;
     cta: string;
+    ctaJoined: string;
   };
   features: {
     title: string;
@@ -27,6 +29,7 @@ export interface Dictionary {
     placeholder: string;
     cta: string;
     success: string;
+    alreadyJoined: string;
     followUs: string;
   };
   footer: {
